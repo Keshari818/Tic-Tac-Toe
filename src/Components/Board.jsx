@@ -55,19 +55,19 @@ const Board = () => {
     <div className="board-container">
       {isWinner ? (
         <>
-          <h4>{isWinner} Won the Game</h4>
+          <h4 className="heading">{isWinner} Won the Game</h4>
           <button onClick={handleReset}>Play Again</button>
         </>
       ) : (
         <>
           {apple ? (
             <>
-            <h4>NoOne Won the Match</h4>
-            <button onClick={handleReset}>Play Again</button>
+            <h4 className="heading">No One Won the Match</h4>
+            <button className="button" onClick={handleReset}>Play Again</button>
             </>
           ) : (
             <>
-              <h4>Player {isXTurn ? "X" : "O"} please move</h4>
+              <h4 className="heading">Player {isXTurn ? "X" : "O"} please move</h4>
               <div className="board-row">
                 <Square onClick={() => handleClick(0)} value={state[0]} />
                 <Square onClick={() => handleClick(1)} value={state[1]} />
